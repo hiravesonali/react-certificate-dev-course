@@ -2,12 +2,6 @@ import MovieContent from './MovieContent';
 import MovieImage from './MovieImage';
 import Ratings from './Ratings';
 
-/*
- This is an Icon that you can use to represent the stars if you like.
- Otherwise, you could use a simple ⭐️ emoji, or * character.
-*/
-// import { StarIcon } from "@heroicons/react/24/solid";
-
 export default function MovieItem({ movies }) {
   return (
     <>

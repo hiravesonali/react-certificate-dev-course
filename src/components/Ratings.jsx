@@ -1,3 +1,9 @@
+/*
+ This is an Icon that you can use to represent the stars if you like.
+ Otherwise, you could use a simple ⭐️ emoji, or * character.
+*/
+// import { StarIcon } from "@heroicons/react/24/solid";
+
 export default function Ratings({ rating }) {
   return (
     <>
@@ -13,4 +19,20 @@ export default function Ratings({ rating }) {
       </div>
     </>
   );
+}
+
+// with starIcon implementation
+{
+  /* <div className="flex items-center gap-1">
+  {rating == null && <span className="text-white">-</span>}
+
+  {Array.from({ length: 5 }, (_, index) => (
+    <StarIcon
+      key={index}
+      className={`h-5 w-5 ${
+        rating != null && index < rating ? 'text-yellow-400' : 'text-gray-400'
+      }`}
+    />
+  ))}
+</div>; */
 }
