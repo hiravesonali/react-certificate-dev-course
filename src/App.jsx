@@ -13,13 +13,29 @@ export default function App() {
     setCurrentMovie(null);
     setShowMovieForm(true);
   };
+
+  const handleSaveMovie = (movieData) => {
+    console.log(movieData, 'currentMovie');
+    setShowMovieForm(false);
+  };
+
+  const handleCancel = () => {
+    console.log('cancel');
+    setShowMovieForm(false);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-10">
       <Modal
         isOpen={showMovieForm}
+        onClose={handleCancel}
         title={currentMovie?.id ? 'Edit Movie' : 'Add Movie'}
       >
-        <MovieForm />
+        <MovieForm
+          movie={currentMovie}
+          onSave={handleSaveMovie}
+          onCancel={handleCancel}
+        />
       </Modal>
 
       <div className="mx-auto max-w-7xl px-6">

@@ -6,15 +6,19 @@ export default function Modal({ title, isOpen, onClose, children }) {
   }
 
   return (
-    <div className="modal-wrapper">
-      <div className="modal-wrapper-inner">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-2xl">
         {title && (
-          <h3 className="modal-title">
-            {title}
-            <button className="modal-close-button" onClick={onClose}>
-              <XMarkIcon className="w-8 h-8" />
+          <div className="mb-6 flex items-center justify-between">
+            <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+
+            <button
+              onClick={onClose}
+              className="rounded-md p-1 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700"
+            >
+              <XMarkIcon className="h-6 w-6" />
             </button>
-          </h3>
+          </div>
         )}
         <div className="modal-inner">{children}</div>
       </div>
