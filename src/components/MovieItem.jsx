@@ -1,6 +1,6 @@
 import MovieContent from './MovieContent';
 import MovieImage from './MovieImage';
-import Ratings from './Ratings';
+import MovieRatings from './MovieRatings';
 
 export default function MovieItem({ movies }) {
   return (
@@ -13,7 +13,7 @@ export default function MovieItem({ movies }) {
             className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg mx-5"
           >
             <div className="relative">
-              <Ratings rating={movie.rating} />
+              <MovieRatings rating={movie.rating} />
               <MovieImage image={movie.image} />
             </div>
             <MovieContent
